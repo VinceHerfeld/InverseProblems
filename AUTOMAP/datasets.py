@@ -29,4 +29,4 @@ class ImageDataset(Dataset):
         img = rgb2gray(plt.imread(file_name))
         m = min(img.shape[0], img.shape[1])
         img = crop(img, top = 0, left = 0, height = m, width = m)
-        return img, fft2(img)
+        return img[:], fft2(img)
